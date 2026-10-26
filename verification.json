@@ -1,0 +1,46 @@
+{
+  "release": "3.1.2",
+  "scope": "Flat archive layout, relative paths and installer validation; no new model-writing efficacy experiment",
+  "offline_tests": {
+    "successful": true,
+    "tests_run": 98,
+    "skipped": [],
+    "failures": 0,
+    "errors": 0,
+    "real_model_calls": 0,
+    "binary_exports_enabled": true,
+    "seconds": 5.281
+  },
+  "preservation": {
+    "all_25_runtime_files_identical_to_3_1_1": true,
+    "all_five_prompt_files_byte_identical": true,
+    "workflow_and_search_permissions_changed": false
+  },
+  "installation": {
+    "default_directory": "~/.agents/skills/anti-defensive-writing",
+    "installs_only_manifest_runtime_files": true,
+    "tests_and_release_files_installed": false,
+    "global_installation_performed_in_this_release": false,
+    "relocated_chinese_and_space_path": true,
+    "unrelated_working_directory": true,
+    "powershell_install_passed": true,
+    "idempotence_passed": true,
+    "installed_files": 25,
+    "installed_bytes_match_previous_release": true,
+    "developer_files_excluded": true,
+    "five_stage_fixture_passed": true,
+    "real_model_calls": 0,
+    "official_skill_validator_passed": true
+  },
+  "document_verification_scope": {
+    "binary_exports_checked_by_offline_suite": true,
+    "new_native_word_application_or_visual_checks": false,
+    "new_native_tex_compile_checks": false,
+    "reason": "Document runtime bytes are unchanged; this release changes distribution paths and installer only."
+  },
+  "privacy": {
+    "personal_api_credentials_bundled": false,
+    "historical_datasets_or_run_logs_bundled": false,
+    "scan_at_archive_build": true
+  }
+}

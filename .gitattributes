@@ -1,0 +1,2 @@
+# Preserve release bytes, including line endings, for SHA-256 verification.
+* -text

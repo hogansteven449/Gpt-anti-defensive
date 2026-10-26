@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "points": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "question": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_basis": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/evidence"
+            }
+          },
+          "answer_basis": {
+            "type": "string",
+            "enum": [
+              "supplied",
+              "partly_supplied",
+              "not_supplied"
+            ]
+          },
+          "relevance": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "question",
+          "source_basis",
+          "answer_basis",
+          "relevance"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "points"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "quote": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "source_id",
+        "quote"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

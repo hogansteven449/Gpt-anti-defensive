@@ -1,0 +1,84 @@
+{
+  "release": "3.1.2",
+  "name": "anti-defensive-writing",
+  "skill_path": ".",
+  "python_minimum": "3.11",
+  "default_installation": "~/.agents/skills/anti-defensive-writing",
+  "skill_files": {
+    "SKILL.md": "02e50fe64491da0a573cb6bcc8e3bc2ac63f0f5cc425d6735c23238793dd7ad3",
+    "agents/openai.yaml": "348fb6f98632c8b91f220facec23b9562b527b75b3cf02dbb2e3d9b394d4be85",
+    "scripts/readeraware/__init__.py": "512b484d100dd7ae89131180b23b4a36d06ec5ce8d7fc6b8c71011638ecf8f93",
+    "scripts/readeraware/codex.py": "f4ca452780cbeefee6449072e4bd9f350aabed5ab649b6b42fc5b4033a11be8c",
+    "scripts/readeraware/fixture.py": "9278b7de9730ce18a318db3abf0348852f779f157c02367e6ab7f28354fda3d8",
+    "scripts/readeraware/inputs.py": "fc997fad544f9b66e89df487a353d3c7ec1ce8ada717b9632ce8aa28beb936cc",
+    "scripts/readeraware/outputs.py": "0adf5deef930d59e9457f77a0b047dafd87773ad0a4299b6445af1ad415cb0af",
+    "scripts/readeraware/pipeline.py": "3aa7f1e3268bc4071b19c97b05f0ce42c4c1b6c5e3ae9376153cb34698050bb7",
+    "scripts/readeraware/preparation.py": "38ebcf03f8716262a1615a584097e4f611aa6ecc0cb43203a37fe483161d2f6c",
+    "scripts/readeraware/util.py": "2592123edda0ddf515917b16541aa9e88d3f6e173b58bfb64907ea443634da6b",
+    "scripts/run_harness.py": "02064bc9f0aa04725832a5fd8e0a055c70f2d5ca45bcf150cedf23f61dddcb94",
+    "references/document-workflow.md": "20532d646ced56748f84392a2cd06600a8a27f3a03f604ca93767425accdae93",
+    "references/prompts/body.txt": "a0add2d4ae907f1bb3bd272b637da9d530d7d030a3bd082b18880f32905f72bf",
+    "references/prompts/future.txt": "cd0ce1e7c7b3a03d98bd540cb17b409f3d9200a29e34dd99ad6b327f6b469c0a",
+    "references/prompts/probabilities.txt": "7fd301094b77d73da1ddf0cec405fe121058862a099a5e1a1829b520716a9fa7",
+    "references/prompts/review.txt": "0cb16975ea9497e58837819e3774ca73592e36b7a77bbabe90ad1ba8c887cd89",
+    "references/prompts/selection.txt": "633871d07067c07f4d2337a5e9ad5173a69daf5cfd8b446fc50caf367f94afa6",
+    "references/requirements-formats.txt": "e977c350b9456f0b544e57741c1e15cb9222352cab897f60e20e3af86c99aaf6",
+    "references/requirements-pandoc.txt": "9f24bd4261381de646bc44bc55b3eca9c4578f57be802baa3d56d3c035421d02",
+    "references/schemas/body.json": "1c3159c767f24f19f5206f0e4728273af78d445edf58980298a9f6ca4b48b404",
+    "references/schemas/future.json": "96bb1f01746e07a8ca3e96cf07e82fcb9bb6997bbf74f400f077c0cfcd1feb54",
+    "references/schemas/probabilities.json": "aabb99e27eb99f3fe89359d6e3834b226e65341853f4590b7397a3b18a4af369",
+    "references/schemas/review.json": "0cae8af7eea86771f86c66ec6d5365d387b2135a35b686d05031b6312575b6da",
+    "references/schemas/selection.json": "62c1da18d0e622917e3c565e21580253de199f5b68a6cd669d622fd277577b1e",
+    "references/workflow-contract.md": "aca5d99d4216cd8d6538845bb926d04bf81eff9da4232a3991b4ec6ad7186d9e"
+  },
+  "all_original_prompt_bytes_preserved": true,
+  "prompt_interface_additions": {
+    "review": {
+      "original_sha256": "be8f47e2cc4cb59d2f1a6902abec465e3a7ab055dbc9e0d41673c7876b5b5b89",
+      "original_bytes": 1510,
+      "original_prefix_exact": true,
+      "appended_interface_bytes": 660,
+      "final_sha256": "0cb16975ea9497e58837819e3774ca73592e36b7a77bbabe90ad1ba8c887cd89"
+    },
+    "probabilities": {
+      "original_sha256": "8cc38c768cf3b7c55b921e42f369b0cbcba1d7964fbf5ceca5f439b587199acf",
+      "original_bytes": 2081,
+      "original_prefix_exact": true,
+      "appended_interface_bytes": 803,
+      "final_sha256": "7fd301094b77d73da1ddf0cec405fe121058862a099a5e1a1829b520716a9fa7"
+    },
+    "selection": {
+      "original_sha256": "18001a2c16cc801c646fec210ea10f67a98543025dcbdd0cf92a04be47da6953",
+      "original_bytes": 3120,
+      "original_prefix_exact": true,
+      "appended_interface_bytes": 753,
+      "final_sha256": "633871d07067c07f4d2337a5e9ad5173a69daf5cfd8b446fc50caf367f94afa6"
+    },
+    "body": {
+      "original_sha256": "834857e02357bd82e3eb43d63a04d69111e5c83dd9acee9313dc0f8335b4a87b",
+      "original_bytes": 2039,
+      "original_prefix_exact": true,
+      "appended_interface_bytes": 1615,
+      "final_sha256": "a0add2d4ae907f1bb3bd272b637da9d530d7d030a3bd082b18880f32905f72bf"
+    },
+    "future": {
+      "original_sha256": "0ec76a0ce2848f94561e8766218053c1f1f0437534d082a7a768df38c7947acf",
+      "original_bytes": 2155,
+      "original_prefix_exact": true,
+      "appended_interface_bytes": 1617,
+      "final_sha256": "cd0ce1e7c7b3a03d98bd540cb17b409f3d9200a29e34dd99ad6b327f6b469c0a"
+    }
+  },
+  "all_five_schemas_unchanged": true,
+  "pipeline": "Main preparation -> A -> B1 -> B2 -> Writer body -> optional Writer future -> Main formatting/validation",
+  "writer_representation": "Markdown only",
+  "main_agent_document_tools": true,
+  "languages": [
+    "Chinese",
+    "English"
+  ],
+  "additional_evaluator_or_baseline": false,
+  "archive_layout": "SKILL.md and resource folders are direct archive-root entries",
+  "installed_payload_identical_to_release": "3.1.1",
+  "developer_tests_installed": false
+}

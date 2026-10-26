@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "audit": {
+      "type": "object",
+      "properties": {
+        "threshold": {
+          "type": "number",
+          "minimum": 0.33,
+          "maximum": 0.67
+        },
+        "threshold_reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/estimate"
+          }
+        }
+      },
+      "required": [
+        "threshold",
+        "threshold_reason",
+        "records"
+      ],
+      "additionalProperties": false
+    },
+    "body_points": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/objective"
+      }
+    },
+    "future_points": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/objective"
+      }
+    }
+  },
+  "required": [
+    "audit",
+    "body_points",
+    "future_points"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "quote": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "source_id",
+        "quote"
+      ],
+      "additionalProperties": false
+    },
+    "estimate": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "p1_event": {
+          "type": "string",
+          "minLength": 1
+        },
+        "p1": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "p1_reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "p2_event": {
+          "type": "string",
+          "minLength": 1
+        },
+        "p2": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "p2_reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "p1_event",
+        "p1",
+        "p1_reason",
+        "p2_event",
+        "p2",
+        "p2_reason"
+      ],
+      "additionalProperties": false
+    },
+    "objective": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "probability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "writing_objective": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "probability",
+        "writing_objective",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

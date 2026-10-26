@@ -1,0 +1,6 @@
+interface:
+  display_name: "Anti-Defensive Writing"
+  short_description: "Draft Chinese or English reports with verified document delivery"
+  default_prompt: "Use $anti-defensive-writing to turn my supplied material into a formal report in my requested language. Prepare the input documents, run the reader-aware Markdown workflow, and deliver verified editable Word or LaTeX plus PDF files."
+policy:
+  allow_implicit_invocation: true
